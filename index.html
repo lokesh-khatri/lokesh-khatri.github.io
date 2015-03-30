@@ -1,1 +1,305 @@
-<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title></title><meta http-equiv="refresh" content="0;url= Inspiring_Young_Art_Contest/Welcome.html" /></head><body></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+
+		<meta charset="utf-8">
+		<title>Lokesh Khatri</title>
+		<meta name="description" content="Lokesh Khatri">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+		<!-- StyleSheet -->
+		<link rel="stylesheet" type="text/css" href="css/transparent.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+
+		<!-- JQuery -->
+		<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+		<!-- Full page.js -->
+		<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+		<script src="vendors/jquery.easings.min.js"></script>
+		<script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
+
+		<!-- Animations -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r71/three.min.js"></script>
+		<script src="js/Projector.js"></script>
+		<script src="js/CanvasRenderer.js"></script>
+
+
+
+		<script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+            	anchors:['Home', 'About', 'Contact'],
+            	animateAnchor: true,
+            	recordHistory: true
+            });
+        });
+    	</script>
+
+
+	</head> 
+
+
+	<body>
+		
+		<div id="fullpage">
+	        <div class="section" id="mainpage" >
+
+	        </div>
+
+	        <div class="section" data-anchor="About">					
+					<div class="container">
+
+						<h1>About</h1>
+
+						<div class="row">
+							<div class="col-sm-6">
+								<p>I wrote my first computer program when I was 11 years old. It was a simple arithmetic calculator made in Microsoft Visual basic. At that time I didn't know much about Visual Basic but I always used to wonder what goes on inside the computer to make the program work. On that day a seed of curiosity was sown. </p>
+							</div>
+
+							<div class="col-sm-6">
+								<p>I want to become an integral part of this extraordinary world, contribute my efforts in every single way possible and be a part of the change computer industry is bringing into our lives.  </p>
+							</div>
+						</div>
+					</div>	        							
+			</div>
+
+			 <div class="section" data-anchor="Contact" id="contact_page">
+
+			 		<div id="first-row">
+			 			<a target="_blank"href="mailto:me@lokeshkhatri.com">me@lokeshkhatri.com</a>
+			 		</div>
+
+			 		<footer id="second-row">
+			 			<h3>© 2015 Lokesh Khatri.</h3>
+			 		</footer>			 
+	        </div>
+    	</div>
+
+    	
+
+		<!-- Navbar -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar">
+
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>					
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+
+					</button>
+
+				<a href="" class="navbar-brand">LK</a>
+				</div><!--End Navbar Header-->
+
+				<div class="collapse navbar-collapse" id="navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#About">ABOUT</a></li>
+						<li><a href="resume/CV.pdf" target="_tab">RESUME</a>
+						<li><a href="#Contact">CONTACT</a>
+
+					</ul>
+				</div>
+
+			</div><!--End Container-->
+
+		</nav><!--End navbar-->
+
+		<script>
+			$(document).ready(function () {
+    			$('div.hidden').fadeIn(2000).removeClass('hidden');
+    			$("#description").text('DEVELOPER.');
+    			$("#description").fadeIn(2000).removeClass('hidden');
+    			$("#description").fadeOut(1000,function() {
+    				$("#description").text('STUDENT.');
+					});
+    			$("#description").fadeIn(1000);
+    			$("#description").fadeOut(1000, function() {
+    				$("#description").text('BATMAN.');
+					});
+    			$("#description").fadeIn(1000);
+    			$("#description").fadeOut(1000,  function() {
+    				$("#description").text('DEVELOPER.');
+					});
+    			$("#description").fadeIn(1000);
+				});		
+		</script>
+
+		<script>
+
+			var mouseX = 0, mouseY = 0,
+
+			windowHalfX = window.innerWidth / 2,
+			windowHalfY = window.innerHeight / 2,
+
+			SEPARATION = 200,
+			AMOUNTX = 10,
+			AMOUNTY = 10,
+
+			camera, scene, renderer;
+
+			init();
+			animate();
+
+			function init() {
+
+				var div = document.createElement('div');
+
+			    div.className = 'hidden';
+			    div.id='title';
+			   	div.textContent="HELLO, I'M LOKESH";
+
+			   	var description = document.createElement('div');
+			   	description.className='hidden';
+			   	description.id='description';
+
+			   	div.appendChild(description);
+
+				var container, separation = 100, amountX = 50, amountY = 50,
+				particles, particle;
+
+				container = document.getElementById('mainpage');
+				container.appendChild(div);
+
+				camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
+				camera.position.z = 100;
+
+				scene = new THREE.Scene();
+
+				renderer = new THREE.CanvasRenderer();
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+				container.appendChild( renderer.domElement );
+
+				// particles
+
+				var PI2 = Math.PI * 2;
+				var material = new THREE.SpriteCanvasMaterial( {
+
+					color: 0xffffff,
+					program: function ( context ) {
+
+						context.beginPath();
+						context.arc( 0, 0, 0.5, 0, PI2, true );
+						context.fill();
+
+					}
+
+				} );
+
+				var geometry = new THREE.Geometry();
+
+				for ( var i = 0; i < 75; i ++ ) {
+
+					particle = new THREE.Sprite( material );
+					particle.position.x = Math.random() * 2 - 1;
+					particle.position.y = Math.random() * 2 - 1;
+					particle.position.z = Math.random() * 2 - 1;
+					particle.position.normalize();
+					particle.position.multiplyScalar( Math.random() * 10 + 450 );
+					particle.scale.x = particle.scale.y = 10;
+					scene.add( particle );
+
+					geometry.vertices.push( particle.position );
+
+				}
+
+				// lines
+
+				var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0xffffff, opacity: 0.5 } ) );
+				scene.add( line );
+
+				document.addEventListener( 'mousemove', onDocumentMouseMove, false );
+				document.addEventListener( 'touchstart', onDocumentTouchStart, false );
+				document.addEventListener( 'touchmove', onDocumentTouchMove, false );
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function onWindowResize() {
+
+				windowHalfX = window.innerWidth / 2;
+				windowHalfY = window.innerHeight / 2;
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			//
+
+			function onDocumentMouseMove(event) {
+
+				mouseX = event.clientX - windowHalfX;
+				mouseY = event.clientY - windowHalfY;
+
+			}
+
+			function onDocumentTouchStart( event ) {
+
+				if ( event.touches.length > 1 ) {
+
+					event.preventDefault();
+
+					mouseX = event.touches[ 0 ].pageX - windowHalfX;
+					mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
+				}
+
+			}
+
+			function onDocumentTouchMove( event ) {
+
+				if ( event.touches.length == 1 ) {
+
+					event.preventDefault();
+
+					mouseX = event.touches[ 0 ].pageX - windowHalfX;
+					mouseY = event.touches[ 0 ].pageY - windowHalfY;
+
+				}
+
+			}
+
+			//
+
+			function animate() {
+
+				requestAnimationFrame( animate );
+
+				render();
+
+			}
+
+			function render() {
+
+				camera.position.x += ( mouseX - camera.position.x ) * .05;
+				camera.position.y += ( - mouseY + 200 - camera.position.y ) * .05;
+				camera.lookAt( scene.position );
+
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</body>
+
+
+</html>

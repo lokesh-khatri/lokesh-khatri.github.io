@@ -1,0 +1,111 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+.navbar{
+
+	background-color: transparent;
+	background: transparent;
+	font-size: 16px;
+	font-family: 'Montserrat';	
+	border: 0;
+}
+
+.nav.navbar-nav.navbar-right li a:hover, .nav.navbar-nav.navbar-right li a:focus {
+	color: #d3d3d3;  /*Sets the text hover color on navbar*/
+}
+
+.nav.navbar-nav.navbar-right li a {
+    color: #5B6073;
+}
+
+body{
+	font-family: 'Montserrat';
+	
+}
+
+
+a{
+	color:#0078ff;
+}
+
+#mainpage{
+	margin: 0px;
+	overflow: hidden;
+}
+
+
+
+#About{
+	background-color: #EBEBEB;
+}
+
+#title{
+    position: absolute;
+    background-color:transparent;
+   	top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    height: 0;
+    margin: 0 auto;
+    font-size: 40px;
+    color: white;
+    font-family: 'Montserrat';
+
+}
+
+div.hidden{
+	display: none;
+}
+
+#description{
+	display: none;
+	text-align: center;
+}
+
+#first-row{
+	text-align: center;
+	font-size: 55px;
+
+}
+
+a[href="mailto:me@lokeshkhatri.com"]{ 
+	color: white;
+}
+
+a[href="mailto:me@lokeshkhatri.com"]:hover{ 
+	color: #383838;
+}
+
+#second-row{
+	position : absolute;
+	background-color: #383838;
+	height: 150px;
+	bottom:0px;
+	width: 100%;
+
+}
+
+h3{
+	text-align: center;
+	color: white;
+	margin-top: 80px;
+}
+#contact_page{
+	background-color: black;
+}
+
+ul{
+	padding-top: 4px;
+}
+
+li:nth-child(3) {
+    border: 2px solid #ffffff;
+	border-radius: 5px;
+}
+
+li:nth-child(3):hover {
+    background-color: white;
+    border: 2px solid #000;
+	border-radius: 5px;
+	color: white;
+}
