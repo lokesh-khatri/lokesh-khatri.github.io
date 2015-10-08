@@ -10,7 +10,7 @@
 }
 
 .nav.navbar-nav.navbar-right li a:hover, .nav.navbar-nav.navbar-right li a:focus {
-	color: #d3d3d3;  /*Sets the text hover color on navbar*/
+	color: #ffffff;  /*Sets the text hover color on navbar*/
 }
 
 .nav.navbar-nav.navbar-right li a {
